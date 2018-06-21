@@ -10,15 +10,14 @@
   <script src="src/js/invPopup.js"></script>
   <script>
     $(document).ready(function(){
-      var test1 = new InvPopup('test1');
+      var test1 = new InvPopup({
+        idOverlay: 'test1',
+        maxWidth: '400px'
+      });
       test1.linkBtn('testBtn1');
 
       var test2 = new InvPopup('test2');
-      test2.setCloseBtn('closeBtn2');
-      test2.setMinWidth('500px');
-      test2.setFade(7000);
       test2.linkBtn('testBtn2');
-      test2.getReadyByTime(4000);
     });
   </script>
 </head>
@@ -27,13 +26,13 @@
 
   <div id="test1" class="iOverlay">
     <div class="iOverlay__wrap">
-      TEST 1
+      Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus brains sit​​, morbo vel maleficia? De apocalypsi gorger omero undead survivor dictum mauris. Hi mindless mortuis soulless creaturas, imo evil stalking monstra adventus resi dentevil vultus comedat cerebella viventium. Qui animated corpse, cricket bat max brucks terribilem incessu zomby.
     </div>
   </div>
 
   <button id="testBtn2">test2</button>
 
-  <div id="test2" class="iOverlay">
+  <div id="invPopup" class="iOverlay">
     <div class="iOverlay__wrap">
       <h1>test2</h1>
       <a href="#" id="closeBtn2">Закрыть</a>
