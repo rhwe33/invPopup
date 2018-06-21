@@ -1,35 +1,23 @@
 class InvPopup {
 
-  constructor(idOverlay) {
+  constructor({
+    idOverlay  = 'invPopup',
+    maxWidth   = '300px',
+    maxHeight  = '300px',
+    minWidth   = '100px',
+    minHeight  = '100px',
+    background = 'white',
+    fade       = 300
+  }) {
     this.overlay = '#'+idOverlay+'.iOverlay';
     this.btn;
-    this.maxWidth = '300px';
-    this.maxHeight = '300px';
-    this.minWidth = '100px';
-    this.minHeight = '100px';
-    this.background = 'white';
-    this.fade = 300;
+    this.maxWidth = maxWidth;
+    this.maxHeight = maxHeight;
+    this.minWidth = minWidth;
+    this.minHeight = minHeight;
+    this.background = background;
+    this.fade = fade;
     this.closeBtn;
-  }
-
-  setMaxWidth(param) {
-    this.maxWidth = param;
-  }
-
-  setMaxHeight(param) {
-    this.maxHeight = param;
-  }
-
-  setMinWidth(param) {
-    this.minWidth = param;
-  }
-
-  setMinHeight(param) {
-    this.minHeight = param;
-  }
-
-  setBackground(param) {
-    this.background = param;
   }
 
   setFade(param) {
