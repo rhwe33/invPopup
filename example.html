@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Example how invPopup working</title>
+  <link rel="stylesheet" href="src/css/invPopup.css">
+  <script src="src/js/invPopup.js"></script>
+  <script>
+    var test1 = new InvPopup('test1');
+    test1.linkBtn('testBtn1');
+
+    var test2 = new InvPopup('test2');
+    test2.setCloseBtn('closeBtn2');
+    test2.setMinWidth('500px');
+    test2.setFade(7000);
+    test2.linkBtn('testBtn2');
+    test2.getReadyByTime(4000);
+  </script>
+</head>
+<body>
+  <button id="testBtn1">test1</button>
+
+  <div id="test1" class="iOverlay">
+    <div class="iOverlay__wrap">
+      TEST 1
+    </div>
+  </div>
+
+  <button id="testBtn2">test2</button>
+
+  <div id="test2" class="iOverlay">
+    <div class="iOverlay__wrap">
+      <h1>test2</h1>
+      <a href="#" id="closeBtn2">Закрыть</a>
+    </div>
+  </div>
+</body>
+</html>
