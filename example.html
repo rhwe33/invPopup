@@ -8,15 +8,17 @@
   <link rel="stylesheet" href="src/css/invPopup.css">
   <script src="src/js/invPopup.js"></script>
   <script>
-    var test1 = new InvPopup('test1');
-    test1.linkBtn('testBtn1');
+    $(document).ready(function(){
+      var test1 = new InvPopup('test1');
+      test1.linkBtn('testBtn1');
 
-    var test2 = new InvPopup('test2');
-    test2.setCloseBtn('closeBtn2');
-    test2.setMinWidth('500px');
-    test2.setFade(7000);
-    test2.linkBtn('testBtn2');
-    test2.getReadyByTime(4000);
+      var test2 = new InvPopup('test2');
+      test2.setCloseBtn('closeBtn2');
+      test2.setMinWidth('500px');
+      test2.setFade(7000);
+      test2.linkBtn('testBtn2');
+      test2.getReadyByTime(4000);
+    });
   </script>
 </head>
 <body>
