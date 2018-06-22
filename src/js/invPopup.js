@@ -1,34 +1,36 @@
 class InvPopup {
 
   constructor({
-    btn        = 'open_popup',
     idOverlay  = 'invPopup',
     maxWidth   = '300px',
     maxHeight  = '300px',
     minWidth   = '100px',
     minHeight  = '100px',
     background = 'white',
-    closeBtn   = 'close_popup',
     fade       = 300
   }) {
-
-    // OPTIONS
-    this.btn        = '#' + btn;
-    this.overlay    = '#' + idOverlay;
-    this.maxWidth   = maxWidth;
-    this.maxHeight  = maxHeight;
-    this.minWidth   = minWidth;
-    this.minHeight  = minHeight;
+    this.overlay = '#'+idOverlay+'.iOverlay';
+    this.btn;
+    this.maxWidth = maxWidth;
+    this.maxHeight = maxHeight;
+    this.minWidth = minWidth;
+    this.minHeight = minHeight;
     this.background = background;
-    this.closeBtn   = '.' + closeBtn;
-    this.fade       = fade;
-
-    // CREATING
-    this.create();
+    this.fade = fade;
+    this.closeBtn;
   }
 
-  create() {
+  setFade(param) {
+    this.width = param;
+  }
+
+  setCloseBtn(param) {
+    this.closeBtn = '#'+param;
+  }
+
+  linkBtn(param) {
     this.popupStyle();
+    this.btn = '#'+param;
     var iOverlay = this.overlay;
     var fade = this.fade;
     $(this.btn).on('click', function(){
