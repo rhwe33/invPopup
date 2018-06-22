@@ -32,8 +32,9 @@ class InvPopup {
     var iOverlay = this.overlay;
     var fade = this.fade;
     $(this.btn).on('click', function(){
-      $(iOverlay).fadeIn(fade);
-      $(iOverlay).css('display', 'flex');
+      $(iOverlay).wrap('<div id="invPopup" class="iOverlay"></div>');
+      $('#invPopup').fadeIn(fade);
+      $('#invPopup').css('display', 'flex');
     });
     this.closeByOverlay();
     this.closeByBtn();
@@ -72,7 +73,7 @@ class InvPopup {
     var minWidth = this.minWidth;
     var minHeight = this.minHeight;
     var background = this.background;
-    var iPopupWrap = $(this.overlay).children();
+    var iPopupWrap = $(this.overlay);
     $(iPopupWrap).css({'position' : 'relative', 'z-index' : '5556', 'max-width' : maxWidth, 'max-height' : maxHeight, 'min-width' : minWidth, 'min-height' : minHeight, 'background' : background});
   }
 

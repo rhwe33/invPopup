@@ -11,23 +11,20 @@
   <script>
     $(document).ready(function(){
       var test1 = new InvPopup({
+        btn : 'testBtn1',
         idOverlay: 'test1',
         maxWidth: '400px'
       });
-      test1.linkBtn('testBtn1');
 
       var test2 = new InvPopup('test2');
-      test2.linkBtn('testBtn2');
     });
   </script>
 </head>
 <body>
   <button id="testBtn1">test1</button>
 
-  <div id="test1" class="iOverlay">
-    <div class="iOverlay__wrap">
-      Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus brains sit​​, morbo vel maleficia? De apocalypsi gorger omero undead survivor dictum mauris. Hi mindless mortuis soulless creaturas, imo evil stalking monstra adventus resi dentevil vultus comedat cerebella viventium. Qui animated corpse, cricket bat max brucks terribilem incessu zomby.
-    </div>
+  <div id="test1" class="iOverlay__wrap">
+    Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus brains sit​​, morbo vel maleficia? De apocalypsi gorger omero undead survivor dictum mauris. Hi mindless mortuis soulless creaturas, imo evil stalking monstra adventus resi dentevil vultus comedat cerebella viventium. Qui animated corpse, cricket bat max brucks terribilem incessu zomby.
   </div>
 
   <button id="testBtn2">test2</button>
